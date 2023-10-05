@@ -1,0 +1,48 @@
+.card-footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0.5rem 1rem;
+
+  .card-container {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 0.5em;
+  }
+
+  .card-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    .group {
+      display: flex;
+      justify-content: space-around;
+
+      svg {
+        margin-right: 1rem;
+        cursor: pointer;
+      }
+    }
+
+    .bookmark-icon {
+      cursor: pointer;
+      animation: pulse 500ms;
+    }
+  }
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1.2);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,53 @@
+.avatar {
+  display: block;
+  object-fit: cover;
+  outline: none;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  transition: all 200ms ease-in-out;
+
+  &.small {
+    width: 1.6em;
+    height: 1.6em;
+
+    &:hover,
+    &.active {
+      box-shadow: 0px 0px 2px 2px rgba(0, 145, 255, 1);
+    }
+  }
+
+  &.common {
+    width: 2.25em;
+    height: 2.25em;
+  }
+
+  &.medium {
+    width: 3em;
+    height: 3em;
+
+    &.square {
+      border-radius: 0;
+    }
+  }
+
+  &.big {
+    width: 4em;
+    height: 4em;
+  }
+
+  &.giant {
+    width: 6em;
+    height: 6em;
+  }
+
+  &.large {
+    width: 8em;
+    height: 8em;
+
+    @media (max-width: 400px) {
+      margin: 0 1rem;
+      width: 6em;
+      height: 6em;
+    }
+  }
+}

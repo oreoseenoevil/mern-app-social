@@ -1,0 +1,36 @@
+.signup {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: inherit;
+
+  svg.logo-avatar {
+    width: 5em;
+    height: 5em;
+  }
+
+  svg.visible {
+    &.active {
+      fill: #fafafa;
+    }
+  }
+
+  button.Mui-disabled {
+    background-color: #0984e3;
+    color: #fafafa;
+  }
+
+  .MuiRadio-root {
+    color: inherit;
+  }
+
+  .MuiRadio-colorSecondary.Mui-checked {
+    color: #f50057;
+  }
+
+  .MuiFormControlLabel-root {
+    margin-right: 0;
+  }
+}

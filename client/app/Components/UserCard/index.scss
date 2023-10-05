@@ -1,0 +1,31 @@
+.user-card {
+  width: 100%;
+  padding: 0.5em 1em;
+  background: transparent;
+  transition: all 200ms ease-in-out;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &:hover {
+    border-color: #0091ff;
+  }
+
+  .block-card {
+    display: flex;
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+
+    .user-name {
+      margin-left: 1rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .block-child {
+      justify-self: flex-end;
+    }
+  }
+}

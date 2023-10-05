@@ -1,0 +1,199 @@
+$cubic: cubic-bezier(0.4, 0.01, 0.165, 0.99);
+
+ul.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-direction: row;
+  gap: 1rem;
+  flex-wrap: nowrap;
+  list-style: none;
+
+  .nav-link {
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+  }
+
+  @media (max-width: 700px) {
+    top: -100px;
+    right: 0;
+    position: absolute;
+    width: 100%;
+    padding: 1rem 2rem;
+    background: #fafafa;
+    display: inline-flex;
+    transition: all 300ms $cubic;
+
+    &.active {
+      top: 0px;
+    }
+
+    &.dark {
+      background: #2e2e2e;
+    }
+  }
+
+  li {
+    margin-right: 1rem;
+
+    &:nth-last-child(1) {
+      margin-right: 0;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      opacity: .9;
+      transition: all 100ms ease;
+      cursor: pointer;
+
+      &.active {
+        opacity: 1;
+
+        & > * {
+          fill: #0091ff;
+        }
+      }
+
+      &:hover {
+        opacity: 1;
+      }
+
+      & > * {
+        width: 1.6em;
+        height: 1.6em;
+      }
+    }
+
+    &.other-menu {
+      position: relative;
+      z-index: 10;
+
+      a {
+        position: relative;
+
+        .notifications-length {
+          position: absolute;
+          color: #000;
+          top: -10px;
+          right: -5px;
+          background-color: red;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: .5rem;
+          border-radius: 50%;
+          font-size: .75rem;
+          z-index: 1;
+        }
+      }
+
+      .dropdown-menu {
+        position: absolute;
+        background: #fff;
+        box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
+        padding: 1em;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        border-radius: 5px;
+        z-index: 1;
+
+        &.user {
+          width: 160px;
+          top: 3em;
+          right: -5px;
+        }
+
+        &.notification {
+          padding-left: 0;
+          padding-right: 0;
+          width: 400px;
+          height: 300px;
+          max-height: 300px;
+          gap: 1em;
+          top: 3em;
+          right: -5px;
+
+          @media (max-width: 700px) {
+            position: fixed;
+            top: 60px;
+            width: 100vw;
+            min-height: calc(100vh - 60px);
+            right: 0;
+            box-shadow: none;
+
+            &::before,
+            &::after {
+              border: none;
+              box-shadow: none;
+            }
+          }
+        }
+
+        &.dark {
+          background: #181818;
+          box-shadow: 0px 0px 3px rgba(255, 255, 255, 0.1);
+
+          &::before,
+          &::after {
+            border: 8px solid #181818;
+            box-shadow: -1px -1px 2px rgba(255, 255, 255, 0.03);
+          }
+        }
+
+        &::before,
+        &::after {
+          top: -6px;
+          right: 9px;
+          left: auto;
+          position: absolute;
+          display: inline-block;
+          content: '';
+          border: 8px solid transparent;
+          border: 8px solid #fff;
+          transform: rotate(45deg);
+          box-shadow: -1px -1px 2px rgba(0, 0, 0, 0.03);
+        }
+
+        .dropdown-item {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-wrap: nowrap;
+          padding: 0.5em;
+          font-size: 1rem;
+          color: inherit;
+          cursor: pointer;
+        }
+
+        .dropdown-line {
+          margin: 5px 0;
+          height: 1px;
+          width: 100%;
+          background: rgba(0, 0, 0, 0.1);
+
+          &.dark {
+            background: rgba(255, 255, 255, 0.1);
+          }
+        }
+      }
+
+      span {
+        cursor: pointer;
+        display: flex;
+        flex-wrap: nowrap;
+
+        .dropdown {
+          height: 1.2em;
+          width: 1.2em;
+          align-self: flex-end;
+        }
+      }
+    }
+  }
+}

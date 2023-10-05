@@ -1,0 +1,17 @@
+.comment-output {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1em;
+  padding: 0 1rem;
+
+  .show-comments {
+    opacity: 0.7;
+    cursor: pointer;
+    transition: all 200ms ease;
+
+    &:hover {
+      color: rgba(0, 145, 255, 1);
+    }
+  }
+}
