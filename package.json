@@ -20,6 +20,7 @@
     "webpack"
   ],
   "author": "Jessie Tarrosa (https://github.com/oreoseenoevil)",
+  "homepage": "https://github.com/oreoseenoevil/mern-app-social#readme",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.14.0",
@@ -95,5 +96,8 @@
     "redux-thunk": "^2.3.0",
     "socket.io": "^4.1.2",
     "socket.io-client": "^4.1.2"
+  },
+  "engines": {
+    "node": ">= 16.0.0"
   }
 }
